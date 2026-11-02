@@ -1,0 +1,149 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>오름 OREUM — 제품 상세</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300;400;500&family=Cormorant+Garamond:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{--iv:#f6f3ea;--wm:#fbf9f4;--cr:#ece6d6;--sg:#a9b794;--mt:#7f9460;--ol:#5d6b3f;--mo:#2f3b22;--mu:#6b7357;--ln:rgba(93,107,63,.25);--sf:'Noto Serif KR','Cormorant Garamond',serif;--en:'Cormorant Garamond','Noto Serif KR',serif;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*{box-sizing:inherit;margin:0;padding:0}html{scroll-behavior:smooth}
+body{background:var(--wm);color:#2a3120;font-family:var(--sf);font-weight:300;line-height:1.9;word-break:keep-all;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(251,249,244,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--ln);display:flex;align-items:center;gap:28px;padding:12px 5vw}
+.lg{font-size:22px;font-weight:400;line-height:1;white-space:nowrap}.lg small{display:block;font-family:var(--en);font-size:9px;letter-spacing:.3em;margin-top:4px;text-align:center}
+nav{display:flex;gap:6px;overflow-x:auto;scrollbar-width:none}nav::-webkit-scrollbar{display:none}
+nav a{white-space:nowrap;font-size:13px;padding:7px 15px;border:1px solid transparent;color:var(--mu);transition:.3s}
+nav a:hover{color:var(--ol)}nav a.on{border-color:var(--ol);color:var(--ol)}
+.hero{position:relative;overflow:hidden;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:86vh;padding:60px 6vw;background:linear-gradient(160deg,#e9eddc,#f6f3ea 60%)}
+.hero:before{content:"";position:absolute;right:-8vw;top:50%;width:62vw;height:62vw;max-width:760px;max-height:760px;transform:translateY(-50%);border-radius:50%;background:radial-gradient(circle,#dfe6cf,rgba(223,230,207,0) 68%)}
+.pt{position:absolute;bottom:-20px;border-radius:50%;background:radial-gradient(circle at 30% 30%,#fff,#c9d8a6);opacity:0;animation:up 9s linear infinite}
+@keyframes up{0%{transform:translateY(0);opacity:0}15%{opacity:.7}100%{transform:translateY(-90vh);opacity:0}}
+.hc{position:relative;z-index:2;animation:in 1.2s both}
+.tag{font-family:var(--en);letter-spacing:.3em;font-size:12px;color:var(--ol)}
+h1{font-weight:400;font-size:clamp(30px,4.4vw,56px);line-height:1.4;margin-top:14px;letter-spacing:-.01em}
+.en{font-family:var(--en);letter-spacing:.2em;color:var(--ol);font-size:14px;margin-top:10px}
+.msg{margin-top:26px;font-size:17px;color:var(--mu)}
+.meta{margin-top:26px;font-size:13px;color:var(--mu);border-top:1px solid var(--ln);padding-top:14px;display:inline-block}
+.pic{position:relative;z-index:2;display:flex;justify-content:center;animation:in 1.4s .2s both}
+.pic img{height:min(66vh,640px);max-width:100%;aspect-ratio:3/4;object-fit:contain}
+@keyframes in{from{opacity:0;transform:translateY(22px)}}
+.cp{padding:120px 6vw;text-align:center;background:var(--iv)}
+.cp p{font-size:clamp(21px,2.8vw,34px);font-weight:400;line-height:1.7;margin:0 auto;max-width:20em}
+.cp p+p{margin-top:56px}
+.tx{position:relative;height:60vh;min-height:360px;overflow:hidden}
+.tx{background:linear-gradient(135deg,#e4e9d6,#cfd9ba)}.tx .dp{position:absolute;left:50%;top:22%;width:22px;height:30px;margin-left:-11px;border-radius:50% 50% 50% 50%/60% 60% 40% 40%;background:radial-gradient(circle at 35% 30%,#fff,#bcd08c 60%,#8da95c);animation:fl 4.4s infinite cubic-bezier(.6,0,.9,.6)}
+.tx .rp{position:absolute;left:50%;top:68%}.tx .rp i{position:absolute;left:0;top:0;border:1px solid rgba(93,107,63,.55);border-radius:50%;opacity:0;animation:rpl 4.4s infinite}.tx .rp i:nth-child(2){animation-delay:.25s}.tx .rp i:nth-child(3){animation-delay:.5s}
+@keyframes fl{0%{transform:translateY(0) scale(.4);opacity:0}15%{transform:translateY(0) scale(1);opacity:1}70%{transform:translateY(30vh);opacity:1}72%,100%{transform:translateY(30.5vh) scale(.3);opacity:0}}
+@keyframes rpl{0%,70%{width:6px;height:6px;margin:0;opacity:0}72%{opacity:.9}100%{width:320px;height:80px;margin:-40px 0 0 -160px;opacity:0}}
+.sec{padding:100px 6vw;max-width:1100px;margin:0 auto}
+h2{font-weight:400;font-size:clamp(22px,2.6vw,32px);line-height:1.5}
+.ing{margin-top:40px;border-top:1px solid var(--ln)}
+.ing div{display:grid;grid-template-columns:240px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--ln)}
+.ing b{font-weight:400}.ing span{color:var(--mu);font-size:15px}
+.st{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-top:40px;border-top:1px solid var(--ln)}
+.st div{padding:26px 22px 0 0;position:relative;font-size:15px}.st div:before{content:"";position:absolute;top:-5px;left:0;width:9px;height:9px;border-radius:50%;background:var(--mt)}
+.st i{font-style:normal;font-family:var(--en);letter-spacing:.2em;color:var(--ol);font-size:13px;display:block;margin-bottom:6px}
+dl{margin-top:36px;border-top:1px solid var(--ln)}
+dl>div{display:grid;grid-template-columns:200px 1fr;padding:16px 0;border-bottom:1px solid var(--ln);font-size:14px;gap:16px}
+dt{color:var(--mu)}dd em{font-style:normal;color:#9a8f6a}
+details summary{cursor:pointer;list-style:none;color:var(--ol)}details summary::-webkit-details-marker{display:none}details summary:after{content:" +"}details[open] summary:after{content:" −"}
+details p{margin-top:10px;line-height:1.8;color:#3b4430}.bd{display:inline-block;font-family:var(--en);font-size:11px;letter-spacing:.15em;border:1px solid var(--ol);color:var(--ol);padding:2px 10px;margin-bottom:10px}
+.nx{display:flex;justify-content:space-between;padding:50px 6vw;border-top:1px solid var(--ln);background:var(--iv);font-size:15px}
+.nx a{color:var(--ol)}.nx a:hover{color:var(--mo)}
+.cta{display:inline-block;margin-top:34px;padding:14px 34px;border:1px solid var(--mu);color:var(--mu);font-family:var(--en);letter-spacing:.2em;font-size:13px}
+footer{background:var(--mo);color:#c9d2b6;padding:36px 6vw;font-size:12px;line-height:1.8}
+:focus-visible{outline:2px solid var(--ol);outline-offset:3px}
+@media(max-width:820px){.hero{grid-template-columns:1fr;text-align:center;padding-top:40px}.pic{order:-1}.pic img{height:44vh}.ing div,dl>div{grid-template-columns:1fr;gap:4px}.lg small{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.pt{display:none}}
+</style></head><body>
+<header><a class="lg" href="#serum">오름<small>OREUM</small></a><nav id="nav"></nav></header>
+<main id="app"></main>
+<footer>본 페이지는 포트폴리오를 위한 가상 브랜드 OREUM의 상세페이지 기획안이며, 실제 판매 제품이 아닙니다. 전성분과 제품 정보는 개발 후보 기획안입니다.</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+window.O3D=(function(){
+var T=window.THREE;if(!T)return null;
+var OL='#44542a',IV=0xf3efe2,SAGE=0xb7c79b,MAT=0x6f8a47,labels=[],fontsOK=false;
+function C(h){return new T.Color(h).convertSRGBToLinear()}
+function V(x,y){return new T.Vector2(x,y)}
+function prof(r,h,rs,bs,y0){y0=y0||0;bs=bs||1;var p=[V(0,y0)],i,a;for(i=0;i<=5;i++){a=-Math.PI/2+i/5*Math.PI/2;p.push(V(r-bs+bs*Math.cos(a),y0+bs+bs*Math.sin(a)))}for(i=0;i<=8;i++){a=i/8*Math.PI/2;p.push(V(r-rs+rs*Math.cos(a),y0+h-rs+rs*Math.sin(a)))}p.push(V(0,y0+h));return p}
+function lathe(r,h,rs,bs,y0){return new T.LatheGeometry(prof(r,h,rs,bs,y0),64)}
+function mat(c,r){return new T.MeshStandardMaterial({color:C(c),roughness:r,metalness:0})}
+function glass(c,o,r){return new T.MeshPhysicalMaterial({color:C(c),roughness:r||.42,clearcoat:.5,clearcoatRoughness:.3,transparent:true,opacity:o,side:T.DoubleSide})}
+function put(g,geo,m,x,y,z){var s=new T.Mesh(geo,m);s.position.set(x||0,y||0,z||0);s.castShadow=true;s.receiveShadow=true;g.add(s);return s}
+function sp(x,s,cx,y,size,gap,w){x.font=(w||'400')+' '+size+'px "Cormorant Garamond","Noto Serif KR",serif';var t=0,i,ws=[];for(i=0;i<s.length;i++){ws[i]=x.measureText(s[i]).width;t+=ws[i]+gap}t-=gap;var c0=cx-t/2;x.textAlign='left';for(i=0;i<s.length;i++){x.fillText(s[i],c0,y);c0+=ws[i]+gap}}
+function tex(type,vol){var W=1024,H=800,c=document.createElement('canvas');c.width=W;c.height=H;var t=new T.CanvasTexture(c);t.anisotropy=8;t.encoding=T.sRGBEncoding;
+function draw(){var x=c.getContext('2d');x.clearRect(0,0,W,H);x.fillStyle=OL;x.strokeStyle=OL;x.lineWidth=5;x.beginPath();x.moveTo(W/2-170,H*.21);x.quadraticCurveTo(W/2,H*.04,W/2+170,H*.2);x.stroke();sp(x,'OREUM',W/2,H*.43,150,26,'500');sp(x,'JEJU MATCHA',W/2,H*.60,50,9);sp(x,type,W/2,H*.71,50,9);sp(x,vol,W/2,H*.88,50,7);t.needsUpdate=true}
+labels.push(draw);if(fontsOK)draw();return t}
+function lm(t){var m=new T.MeshBasicMaterial({map:t,transparent:true,depthWrite:false});m.polygonOffset=true;m.polygonOffsetFactor=-2;return m}
+function cyl(g,r,y,w,t){var th=w/r,m=new T.Mesh(new T.CylinderGeometry(r+.2,r+.2,w*.78,48,1,true,-th/2,th),lm(t));m.position.y=y;m.renderOrder=3;g.add(m)}
+function info(g,n,t,v){g.userData.info=n+' · '+t+' · '+v;return g}
+var B={
+serum:function(){var g=new T.Group();put(g,lathe(19,62,10,3),glass(0xc3d2aa,.92,.5));put(g,lathe(17,48,9,2,4),glass(0xd7e6b0,.5,.3));put(g,lathe(13.5,14,2,.5,62),mat(IV,.55));put(g,lathe(9,38,9,.5,76),mat(IV,.5));cyl(g,19,30,27,tex('CALMING SERUM','30 ml'));return info(g,'제주 말차 진정 세럼','수분 진정 세럼','30ml')},
+toner:function(){var g=new T.Group();put(g,lathe(23,118,12,3),glass(SAGE,.9,.45));put(g,lathe(21,41,3,.5,117),mat(IV,.55));cyl(g,23,58,34,tex('SKIN TONER','150 ml'));return info(g,'제주 말차 수분 진정 토너','토너','150ml')},
+lotion:function(){var g=new T.Group();put(g,lathe(24,118,14,3),mat(0xb2c397,.55));put(g,lathe(9,10,1,.3,116),mat(IV,.55));put(g,lathe(14,16,2,.5,126),mat(IV,.55));put(g,lathe(4.5,12,1,.3,142),mat(IV,.55));put(g,lathe(7,9,3,.3,152),mat(IV,.55));put(g,new T.BoxGeometry(16,4.5,5.5),mat(IV,.55),12,157,0);cyl(g,24,58,34,tex('LOTION','150 ml'));return info(g,'제주 말차 수분 보습 로션','로션','150ml')},
+foam:function(){var g=new T.Group(),b=new T.Group();b.scale.z=.5;var m=new T.Mesh(new T.LatheGeometry([V(0,22),V(24,22),V(28,146),V(0,146)],64),mat(0xf0ecd8,.6));m.castShadow=true;m.receiveShadow=true;b.add(m);cyl(b,26,84,40,tex('CLEANSING FOAM','120 ml'));g.add(b);put(g,lathe(22,22,3,.8),mat(MAT,.5));put(g,new T.BoxGeometry(57,10,3),mat(0xe4e0cb,.7),0,151,0);return info(g,'제주 말차 약산성 클렌징폼','클렌징폼','120ml')},
+mask:function(){var g=new T.Group(),k=new T.Group();k.rotation.x=-.1;put(k,new T.BoxGeometry(110,160,2.4),mat(0xbccb9f,.7),0,80,0);put(k,new T.BoxGeometry(110,9,2.8),mat(0xaebd92,.7),0,155,0);put(k,new T.BoxGeometry(110,9,2.8),mat(0xaebd92,.7),0,5,0);var m=new T.Mesh(new T.PlaneGeometry(76,59),lm(tex('MASK PACK','25 ml / 1 SHEET')));m.position.set(0,82,1.5);m.renderOrder=3;k.add(m);g.add(k);return info(g,'제주 말차 수분 진정 시트 마스크','마스크팩','25ml / 1매')},
+cream:function(){var g=new T.Group();put(g,lathe(34,42,5,6),glass(0xb5c69a,.94,.5));put(g,lathe(36,20,4,.8,41),mat(IV,.5));cyl(g,34,20,40,tex('CREAM','50 ml'));return info(g,'제주 말차 수분 보습 크림','크림','50ml')}};
+function studio(R,scene){var pm=new T.PMREMGenerator(R),es=new T.Scene();es.add(new T.Mesh(new T.BoxGeometry(80,50,80),new T.MeshBasicMaterial({color:C(0xd9dfc8),side:T.BackSide})));
+function pan(w,h,x,y,z,rx,ry,s){var m=new T.Mesh(new T.PlaneGeometry(w,h),new T.MeshBasicMaterial({color:new T.Color(s,s,s*.96),side:T.DoubleSide}));m.position.set(x,y,z);m.rotation.set(rx,ry,0);es.add(m)}
+pan(22,30,-30,8,12,0,Math.PI/2,7);pan(10,30,30,6,-6,0,-Math.PI/2,3);pan(34,24,0,24,0,Math.PI/2,0,4);pan(40,12,0,0,-35,0,0,2.5);
+scene.environment=pm.fromScene(es,.03).texture;pm.dispose();
+scene.add(new T.HemisphereLight(0xfffdf5,0xc8d2b4,.2));
+var sun=new T.DirectionalLight(0xfff4e0,.9);sun.position.set(-160,280,220);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);var sc=sun.shadow.camera;sc.left=-260;sc.right=260;sc.top=260;sc.bottom=-260;sc.near=50;sc.far=800;sun.shadow.radius=6;sun.shadow.bias=-.0004;scene.add(sun)}
+function lineup(){var world=new T.Group(),prods=[];
+var slab=new T.Mesh(new T.CylinderGeometry(190,198,14,80),mat(0xbcc3ab,.85));slab.scale.z=.55;slab.position.y=-7;slab.receiveShadow=true;world.add(slab);
+function at(g,x,z,s,ry){g.position.set(x,0,z);g.scale.setScalar(s||1);g.rotation.y=ry||0;world.add(g);prods.push(g)}
+at(B.foam(),-118,-4,1,.18);at(B.toner(),-66,-20,1,.1);at(B.lotion(),38,-46,1,-.05);at(B.serum(),-14,44,1.18,0);at(B.mask(),98,-18,1,-.16);at(B.cream(),142,30,1,-.2);
+var pw=new T.Mesh(new T.LatheGeometry([V(0,0),V(15,0),V(11,3),V(6,7),V(0,10)],24),mat(0x6f8f3a,1));pw.position.set(-76,0,66);pw.castShadow=true;world.add(pw);
+function leaf(x,z,ry,s){var sh=new T.Shape();sh.moveTo(0,0);sh.quadraticCurveTo(13,16,0,44);sh.quadraticCurveTo(-13,16,0,0);var m=new T.Mesh(new T.ShapeGeometry(sh),new T.MeshStandardMaterial({color:C(0x5f8038),roughness:.5,side:T.DoubleSide}));m.rotation.x=-Math.PI/2+.08;m.rotation.z=ry;m.position.set(x,.6,z);m.scale.setScalar(s);m.receiveShadow=true;m.castShadow=true;world.add(m)}
+leaf(-150,50,.6,1);leaf(176,66,-2.2,.9);leaf(70,78,2.6,.8);return{world:world,prods:prods}}
+var SR=null,SC=null;
+function rend(w,h){if(!SR){SR=new T.WebGLRenderer({canvas:document.createElement('canvas'),antialias:true,alpha:true,preserveDrawingBuffer:true});SR.shadowMap.enabled=true;SR.shadowMap.type=T.PCFSoftShadowMap;SR.toneMapping=T.ACESFilmicToneMapping;SR.outputEncoding=T.sRGBEncoding;SR.setPixelRatio(1);SC=new T.Scene();studio(SR,SC);var gp=new T.Mesh(new T.PlaneGeometry(900,900),new T.ShadowMaterial({opacity:.22}));gp.rotation.x=-Math.PI/2;gp.receiveShadow=true;gp.name='gp';SC.add(gp)}SR.setSize(w,h,false);return SR}
+function still(id,w,h){w=w||600;h=h||800;var R=rend(w,h),g=B[id](),a=w/h;SC.getObjectByName('gp').visible=true;SC.add(g);var bx=new T.Box3().setFromObject(g),hh=bx.max.y,ww=bx.max.x-bx.min.x,f=Math.tan(9*Math.PI/180),d=Math.max(hh/.8/2/f,ww/.8/2/f/a),cam=new T.PerspectiveCamera(18,a,10,3000);cam.position.set(0,hh*.5+d*.16,d);cam.lookAt(0,hh*.46,0);R.render(SC,cam);var u=R.domElement.toDataURL('image/png');SC.remove(g);return u}
+function lineupStill(w,h){w=w||1400;h=h||1000;var R=rend(w,h),L=lineup(),a=w/h,cam=new T.PerspectiveCamera(28,a,10,3000),f=Math.tan(14*Math.PI/180),d=Math.max(112/f,185/(f*a));SC.getObjectByName('gp').visible=false;SC.add(L.world);cam.position.set(0,82+d*.26,d*.96);cam.lookAt(0,62,0);R.render(SC,cam);var u=R.domElement.toDataURL('image/png');SC.remove(L.world);return u}
+var ready=new Promise(function(res){function go(){fontsOK=true;labels.forEach(function(f){f()});res()}if(document.fonts&&document.fonts.load){Promise.all([document.fonts.load('500 40px "Cormorant Garamond"'),document.fonts.load('400 40px "Cormorant Garamond"')]).then(go,go)}else go()});
+return{T:T,build:function(id){return B[id]()},studio:studio,lineup:lineup,still:still,lineupStill:lineupStill,ready:ready}})();
+
+</script>
+<script>
+var ST={};
+var PR=[
+{id:'serum',en:'JEJU MATCHA CALMING SERUM',ko:'제주 말차 진정 세럼',type:'수분 진정 세럼',vol:'30ml',tag:'HERO PRODUCT',msg:'수분을 차곡차곡 올리다.',cp:['제주의 말차를 담아,<br>피부에 수분을 차곡차곡.','한 방울의 수분,<br>한 겹의 편안함.','오름처럼 차오르는<br>피부의 수분 루틴.'],form:'워터리 젤 타입',pack:'스포이드형 반투명 무광 유리 용기',
+ing:[['제주 녹차잎추출물','오름 전 제품에 공통으로 담는 브랜드의 핵심 원료'],['판테놀 · 알란토인','보습 컨디셔닝을 고려한 성분 조합'],['병풀추출물 · 마데카소사이드','진정 콘셉트를 위해 검토한 원료 후보'],['소듐하이알루로네이트 · 베타-글루칸','수분감 있는 사용감을 위한 성분']],
+use:['세안 후 토너로 피부결을 정돈합니다.','스포이드로 적당량을 덜어냅니다.','얼굴 전체에 부드럽게 펴 발라 흡수시킵니다.','건조함이 느껴지는 부위에 한 번 더 덧발라 줍니다.'],
+inci:'제주 온천수 또는 제주 수원 정제수, 글리세린, 부틸렌글라이콜, 프로판다이올, 녹차잎추출물, 판테놀, 병풀추출물, 베타인, 알란토인, 마데카소사이드, 베타-글루칸, 소듐하이알루로네이트, 하이드록시에틸셀룰로오스, 카보머, 아르기닌, 다이소듐이디티에이, 에틸헥실글리세린, 페녹시에탄올'},
+{id:'toner',en:'JEJU MATCHA SKIN TONER',ko:'제주 말차 수분 진정 토너',type:'수분 진정 토너',vol:'150ml',tag:'STEP 01',msg:'피부가 가장 먼저 만나는 제주.',cp:['제주의 초록으로 시작하는<br>첫 번째 수분.','가볍게 채우고,<br>편안하게 머무는 피부.'],form:'물처럼 가벼운 투명 워터 타입',pack:'반투명 원통형 보틀',
+ing:[['제주 녹차잎추출물','제주 말차의 초록을 담은 공통 핵심 원료'],['판테놀 · 알란토인','보습 컨디셔닝을 고려한 성분 조합'],['병풀추출물','진정 콘셉트를 위해 검토한 원료 후보'],['글리세린 · 베타인 · 소듐하이알루로네이트','가볍고 산뜻한 수분감을 위한 성분']],
+use:['세안 후 적당량을 손이나 화장솜에 덜어냅니다.','얼굴 전체에 부드럽게 펴 바르며 결을 따라 정돈합니다.','다음 단계 스킨케어로 이어갑니다.'],
+inci:'제주 온천수 또는 제주 수원 정제수, 글리세린, 부틸렌글라이콜, 프로판다이올, 녹차잎추출물, 판테놀, 베타인, 병풀추출물, 알란토인, 베타-글루칸, 소듐하이알루로네이트, 하이드록시아세토페논, 다이소듐이디티에이, 에틸헥실글리세린, 페녹시에탄올'},
+{id:'lotion',en:'JEJU MATCHA LOTION',ko:'제주 말차 수분 진정 로션',type:'수분 보습 로션',vol:'150ml',tag:'STEP 03',msg:'채워진 수분이 편안하게 머물도록.',cp:['수분은 채우고,<br>피부는 부드럽게.','제주의 말차를 담은<br>데일리 보습 루틴.'],form:'부드러운 밀크 로션',pack:'펌프형 무광 보틀',
+ing:[['제주 녹차잎추출물','제주 말차의 초록을 담은 공통 핵심 원료'],['판테놀 · 알란토인','보습 컨디셔닝을 고려한 성분 조합'],['세라마이드엔피 · 스쿠알란','부드러운 보습 사용감을 위해 검토한 원료'],['병풀추출물 · 소듐하이알루로네이트','진정 콘셉트와 수분감을 위한 성분']],
+use:['토너와 세럼으로 피부를 정돈한 뒤 사용합니다.','펌프로 적당량을 덜어냅니다.','얼굴 전체에 부드럽게 펴 발라 흡수시킵니다.'],
+inci:'제주 온천수 또는 제주 수원 정제수, 글리세린, 부틸렌글라이콜, 카프릴릭/카프릭트라이글리세라이드, 스쿠알란, 세테아릴알코올, 다이메티콘, 녹차잎추출물, 판테놀, 베타인, 병풀추출물, 알란토인, 세라마이드엔피, 소듐하이알루로네이트, 글리세릴스테아레이트, 피이지-100스테아레이트, 카보머, 트로메타민, 에틸헥실글리세린, 페녹시에탄올'},
+{id:'foam',en:'JEJU MATCHA CLEANSING FOAM',ko:'제주 말차 약산성 클렌징폼',type:'약산성 클렌징폼',vol:'120ml',tag:'CLEANSE',msg:'하루의 시작과 끝을 깨끗하게.',cp:['하루의 시작과 끝,<br>제주 말차로 깨끗하게.','부드러운 거품으로<br>가볍게 씻어내는 하루.'],form:'부드럽고 조밀한 크림 폼',pack:'아이보리 튜브 · 말차 그린 캡',
+ing:[['제주 녹차잎추출물','제주 말차의 초록을 담은 공통 핵심 원료'],['글리세린 · 판테놀 · 알란토인','세안 후의 컨디셔닝을 고려한 성분'],['코코일글루타메이트 계열 세정 성분','순한 세정을 지향하며 검토한 원료 후보'],['베타인','수분감을 위해 검토한 성분']],
+use:['손에 적당량을 덜어 물과 함께 충분히 거품을 냅니다.','얼굴 전체를 부드럽게 문지릅니다.','미지근한 물로 꼼꼼히 헹궈냅니다.'],
+inci:'제주 온천수 또는 제주 수원 정제수, 글리세린, 다이소듐코코암포다이아세테이트, 소듐코코일글루타메이트, 코코베타인, 코코일글라이시네이트, 녹차잎추출물, 판테놀, 베타인, 알란토인, 시트릭애씨드, 소듐클로라이드, 하이드록시아세토페논, 에틸헥실글리세린, 페녹시에탄올'},
+{id:'mask',en:'JEJU MATCHA MASK PACK',ko:'제주 말차 수분 진정 마스크팩',type:'수분 진정 시트 마스크',vol:'25ml / 1매',tag:'SPECIAL CARE',msg:'피부에 잠시 쉬어가는 제주 한 조각.',cp:['10~20분,<br>피부에 머무는 제주 말차의 시간.','수분이 필요한 순간,<br>오름을 한 겹 더하다.'],form:'맑은 워터 에센스를 머금은 시트',pack:'개별 파우치',
+ing:[['제주 녹차잎추출물','제주 말차의 초록을 담은 공통 핵심 원료'],['판테놀 · 알란토인','보습 컨디셔닝을 고려한 성분 조합'],['병풀추출물 · 마데카소사이드','진정 콘셉트를 위해 검토한 원료 후보'],['베타-글루칸 · 소듐하이알루로네이트','촉촉한 사용감을 위한 성분']],
+use:['세안 후 토너로 피부결을 정돈합니다.','시트를 펼쳐 얼굴에 밀착시킵니다.','10~20분 뒤 시트를 떼고 남은 에센스를 가볍게 두드려 흡수시킵니다.'],
+inci:'제주 온천수 또는 제주 수원 정제수, 글리세린, 부틸렌글라이콜, 프로판다이올, 녹차잎추출물, 판테놀, 병풀추출물, 베타인, 알란토인, 마데카소사이드, 베타-글루칸, 소듐하이알루로네이트, 하이드록시에틸셀룰로오스, 잔탄검, 하이드록시아세토페논, 에틸헥실글리세린, 페녹시에탄올'},
+{id:'cream',en:'JEJU MATCHA CREAM',ko:'제주 말차 수분 진정 크림',type:'수분 보습 크림',vol:'50ml',tag:'FINISH',msg:'차곡차곡 채운 수분을 부드럽게 감싸다.',cp:['피부에 차오른 수분을<br>부드럽게 감싸다.','제주의 초록으로 완성하는<br>마지막 보습.'],form:'부드럽게 떠지는 크림',pack:'반투명 무광 유리 단지 · 아이보리 뚜껑',
+ing:[['제주 녹차잎추출물','제주 말차의 초록을 담은 공통 핵심 원료'],['판테놀 · 알란토인','보습 컨디셔닝을 고려한 성분 조합'],['세라마이드엔피 · 스쿠알란 · 시어버터','부드러운 보습감을 위해 검토한 원료'],['병풀추출물 · 베타-글루칸','진정 콘셉트와 수분감을 위한 성분']],
+use:['스킨케어 마지막 단계에서 사용합니다.','소량을 덜어 얼굴 전체에 얹습니다.','부드럽게 펴 발라 감싸줍니다.'],
+inci:'제주 온천수 또는 제주 수원 정제수, 글리세린, 부틸렌글라이콜, 카프릴릭/카프릭트라이글리세라이드, 스쿠알란, 세테아릴알코올, 글리세릴스테아레이트, 시어버터, 녹차잎추출물, 판테놀, 병풀추출물, 알란토인, 세라마이드엔피, 베타-글루칸, 소듐하이알루로네이트, 카보머, 트로메타민, 에틸헥실글리세린, 페녹시에탄올'}];
+var app=document.getElementById('app'),nav=document.getElementById('nav');
+nav.innerHTML=PR.map(function(p){return '<a href="#'+p.id+'" data-id="'+p.id+'">'+p.type.replace('수분 ','').replace('약산성 ','')+'</a>'}).join('');
+function row(a,b){return '<div><dt>'+a+'</dt><dd>'+b+'</dd></div>'}
+function show(){var id=(location.hash||'#serum').slice(1),i=PR.findIndex(function(p){return p.id===id});if(i<0)i=0;var p=PR[i],n=PR[(i+1)%6],v=PR[(i+5)%6],pts='';
+for(var k=0;k<12;k++)pts+='<span class="pt" style="left:'+(8+k*7.5)+'%;width:'+(6+k%4*4)+'px;height:'+(6+k%4*4)+'px;animation-delay:'+(k*.9)+'s;animation-duration:'+(8+k%3*2)+'s"></span>';
+app.innerHTML='<section class="hero">'+pts+'<div class="hc"><div class="tag">'+p.tag+'</div><h1>'+p.ko+'</h1><div class="en">OREUM '+p.en+'</div><p class="msg">'+p.msg+'</p><div class="meta">'+p.type+' · '+p.vol+'</div></div><div class="pic"><img id="ph" alt="오름 '+p.ko+'"></div></section>'
++'<section class="cp">'+p.cp.map(function(c){return '<p>'+c+'</p>'}).join('')+'</section>'
++'<figure class="tx" aria-hidden="true"><div class="dp"></div><div class="rp"><i></i><i></i><i></i></div></figure>'
++'<section class="sec"><h2>제주 말차에서 시작한<br>성분 이야기</h2><div class="ing">'+p.ing.map(function(g){return '<div><b>'+g[0]+'</b><span>'+g[1]+'</span></div>'}).join('')+'</div></section>'
++'<section class="sec" style="padding-top:0"><h2>오름의 사용 루틴</h2><div class="st">'+p.use.map(function(u,j){return '<div><i>STEP 0'+(j+1)+'</i>'+u+'</div>'}).join('')+'</div></section>'
++'<section class="sec" style="padding-top:0"><h2>제품 정보</h2><dl>'+row('제품명','오름 '+p.ko)+row('용량',p.vol)+row('제품 유형',p.type)+row('제형 · 용기',p.form+' · '+p.pack)+row('전성분','<details><summary>개발 후보 성분 보기</summary><span class="bd">PORTFOLIO CONCEPT</span><p>'+p.inci+'</p><p style="font-size:12px;color:#8a8f78">※ 처방 개발용 원료 후보이며, 실제 전성분 표기가 아닙니다. 실제 제품화 시 제조사의 처방 설계, 안전성 및 안정성 시험을 거쳐 확정합니다.</p></details>')+row('사용 시 주의사항','<em>(기획안) 실제 제품이 아니므로 제조사 확정 시 기재</em>')+row('제조업자 · 책임판매업자','<em>해당 없음 (포트폴리오용 가상 브랜드)</em>')+row('제조국 · 상담 정보','<em>해당 없음 (포트폴리오용 가상 브랜드)</em>')+'</dl><span class="cta">PORTFOLIO CONCEPT — 판매하지 않는 가상 제품</span></section>'
++'<div class="nx"><a href="#'+v.id+'">← '+v.type+'</a><a href="#'+n.id+'">'+n.type+' →</a></div>';
+nav.querySelectorAll('a').forEach(function(a){var on=a.dataset.id===p.id;a.className=on?'on':'';if(on)a.scrollIntoView({block:'nearest',inline:'center'})});
+document.title='오름 OREUM — '+p.ko;scrollTo(0,0);if(window.O3D)O3D.ready.then(function(){var im=document.getElementById('ph');if(!im||im.alt.indexOf(p.ko)<0)return;try{if(!ST[p.id])ST[p.id]=O3D.still(p.id,600,800);im.src=ST[p.id]}catch(e){}})}
+addEventListener('hashchange',show);show();
+</script></body></html>
